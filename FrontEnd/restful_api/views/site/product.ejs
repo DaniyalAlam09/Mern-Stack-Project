@@ -1,0 +1,13 @@
+<%- include('../pratials/header'); %>
+<% for(var i=0; i < products.length; i++) { %>
+    <h1 style="color:rgba(203, 211, 90, 0.782); margin-left: 30%;">Product: <%= i+1%></h1>
+    <div style="margin-left: 30%">
+    <h2 >Product:   <%= products[i].Brand_Name %></h2>
+    <h3>Cost:  <%= products[i].Cost %></h3>
+    <div>
+        <!-- router created in index.js --. routes -->
+        <a href="/add-cart/<%=products[i]._id %>" class="btn btn-info w-full">Add To Cart</a>
+    </div>
+</div>
+    <hr>
+ <% } %>

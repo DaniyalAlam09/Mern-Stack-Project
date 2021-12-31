@@ -1,0 +1,25 @@
+<%- include('../pratials/header'); %>
+<table class="table table-hover">
+    <thead>
+ 
+    <tbody>
+        <% for(var i=0;i< product.length;i++) {%>
+            <div >
+                <h3><%=product[i].Brand_Name%></h3>
+                <h4>Price::<%= product[i].Cost %></h4>
+                <br>
+            </div>
+            
+              <% } %>
+
+              <td>Total:</td>
+            <td><%=total  %> </td>
+
+            <tfoot>
+                <tr>
+                   
+                </tr>
+            </tfoot>
+    </tbody>
+</thead>
+</table>

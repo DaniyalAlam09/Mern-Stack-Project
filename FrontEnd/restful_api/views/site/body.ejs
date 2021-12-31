@@ -1,0 +1,976 @@
+<%- include('../pratials/header'); %>
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Prata&display=swap");
+/* font-family: 'Prata', serif; */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&family=Prata&display=swap");
+
+/* font-family: 'Nunito', sans-serif;
+font-family: 'Prata', serif; */
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+::selection {
+  color: rgb(255, 255, 255);
+  background: rgb(0, 0, 0);
+}
+
+@keyframes rotate-s-loader {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(7deg);
+  }
+}
+
+.brown {
+  color: #dfb77a;
+}
+
+.white {
+  color: #fffcf8;
+}
+
+.btn {
+  padding: 15px 25px;
+  border-radius: 40px;
+  font-family: "Nunito", sans-serif;
+  background: #DFB77A;
+  font-size: 16px;
+  border: 1px solid grey;
+  cursor: pointer;
+  transition: all 500ms ease-in-out;
+}
+
+.signup {
+  padding: 15px 25px;
+  border-radius: 40px;
+  font-family: "Nunito", sans-serif;
+  color: #000000;
+  font-size: 16px;
+  border: 1px solid grey;
+  cursor: pointer;
+  transition: all 500ms ease-in-out;
+}
+
+.signup:hover {
+  background-color: #fffcf8;
+  color: #000000;
+}
+
+.btn:hover {
+  background-color: #fffcf8;
+  color: #000000;
+}
+
+.btn1 {
+  position: absolute;
+  padding: 15px 25px;
+  border-radius: 40px;
+  font-family: "Nunito", sans-serif;
+  background-color: #af8e5d;
+  font-size: 16px;
+  border: 1px solid rgb(255, 255, 255);
+  cursor: pointer;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.226);
+  left: 1050px;
+  top: 150px;
+  transition: all 500ms ease-in-out;
+}
+
+.btn1:hover {
+  background-color: #fffcf8;
+  color: #000000;
+}
+
+/* ______________________________________ */
+.arrow {
+  border: solid #fffcf8;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+.c {
+  position: absolute;
+  top: 640px;
+  left: 147px;
+  width: 450px;
+  height: 450px;
+  border-width: 2px;
+  border-style: dashed;
+  border-radius: 600px;
+  color: #ffffff2a;
+  animation-name: rotate-s-loader;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  position: relative;
+}
+
+.c1 {
+  position: absolute;
+  top: 151px;
+  left: 857px;
+  width: 300px;
+  height: 300px;
+  border-width: 2px;
+  border-style: dashed;
+  border-radius: 600px;
+  color: #ffffffa2;
+  animation-name: rotate-s-loader;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  position: relative;
+}
+
+.c2 {
+  position: absolute;
+  top: -150px;
+  left: 1007px;
+  width: 300px;
+  height: 300px;
+  border-width: 2px;
+  border-style: dashed;
+  border-radius: 600px;
+  color: #ffffffa2;
+  animation-name: rotate-s-loader;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  position: relative;
+}
+
+.c4 {
+  position: absolute;
+  top: 1000px;
+  left: 10px;
+  width: 380px;
+  height: 380px;
+  border-width: 2px;
+  border-style: dashed;
+  border-radius: 600px;
+  color: #000000a2;
+  animation-name: rotate-s-loader;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  position: relative;
+}
+
+/* ____________________________________________________________- */
+
+.head {
+  background-color: #dfb77a;
+  position: relative;
+}
+
+.navbar {
+  padding: 0.5rem 1rem;
+}
+
+.logo {
+  float: left;
+  margin-top: 1rem;
+}
+
+.pages {
+  float: right;
+  margin-top: 1rem;
+}
+
+.itmes {
+  display: inline-block;
+  list-style: none;
+  margin-bottom: 0.5em;
+  padding: 1rem 2rem;
+  text-transform: capitalize;
+  font-family: "Prata", serif;
+}
+
+.nav-links {
+  color: #fffcf8;
+  text-decoration: none;
+  font-size: 20px;
+  transition: all 500ms ease-in-out;
+}
+
+.nav-links:hover {
+  color: #000000;
+}
+
+.navbar::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.dropdown {
+  position: relative;
+  transition: all 500ms ease-in-out;
+}
+
+.drop {
+  list-style-type: none;
+  background-color: #131218;
+  padding: 10px;
+  position: absolute;
+  display: none;
+  text-align: left;
+  transition: all 500ms ease-in-out;
+}
+
+.navbar .pages .dropdown .drop:hover {
+  color: #000000;
+  background-color: #fffcf8;
+}
+
+.drop li {
+  width: 200px;
+  transition: all 500ms ease-in-out;
+}
+
+.dropdown:hover .drop {
+  display: block;
+}
+
+.first {
+  height: 120vh;
+  background-image: url(./img/banner.jpg);
+  margin: 20px;
+}
+
+.discover {
+  text-align: center;
+  text-transform: capitalize;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fffcf8;
+  font-size: 100px;
+  font-weight: 300;
+}
+
+.widget {
+  width: 50%;
+  background-color: #131218;
+  padding: 12px;
+  position: absolute;
+  top: 91%;
+  left: -2%;
+}
+
+.social-links {
+  color: #dfb77a;
+  text-decoration: none;
+  font-size: 20px;
+  transition: all 500ms ease-in-out;
+}
+
+.social-links:hover {
+  color: #fffcf8;
+}
+
+.appoinment {
+  height: 1200px;
+  background-color: #131218;
+  margin-top: -20px;
+  position: relative;
+}
+
+.life {
+  position: absolute;
+  font-size: 45px;
+  font-weight: 400;
+  width: 916px;
+  top: 180px;
+  left: 104px;
+}
+
+.man {
+  position: absolute;
+  top: 590px;
+  left: 104px;
+}
+
+.content {
+  width: 480px;
+  position: absolute;
+  top: 723px;
+  left: 762px;
+}
+
+.all,
+.para1,
+.para2 {
+  padding-bottom: 30px;
+}
+
+.all {
+  font-size: 30px;
+  font-weight: 200px;
+}
+
+.para1,
+.para2 {
+  font-family: "Nunito", sans-serif;
+  font-size: 16px;
+  color: #a0a0a0;
+  line-height: 25px;
+}
+
+.para2 {
+  padding-bottom: 70px;
+}
+
+.stock {
+  height: 912px;
+  background-color: #fff5e5;
+  position: relative;
+}
+
+.stock-left {
+  position: absolute;
+  width: 365px;
+  top: 165px;
+  left: 104px;
+}
+
+.stock-head {
+  font-size: 36px;
+  color: #000000;
+  padding-bottom: 20px;
+}
+
+.stock-para {
+  font-family: "Nunito", sans-serif;
+  font-size: 16px;
+  color: #808080;
+  padding-bottom: 30px;
+  line-height: 25px;
+}
+
+.review {
+  display: inline-block;
+  padding: 0 4px 0 0;
+  color: #808080;
+}
+
+.stock-center {
+  position: absolute;
+  top: 160px;
+  left: 501px;
+}
+
+.stock-right {
+  position: absolute;
+  top: 340px;
+  left: 870px;
+  width: 356px;
+}
+
+.details {
+  font-family: "Nunito", sans-serif;
+  font-size: 22px;
+  color: #000000;
+  /* text-decoration: none; */
+  padding: 3px;
+  transition: all 500ms ease-in-out;
+  /* border-bottom:2px solid #000000; */
+}
+
+.details:hover {
+  color: #ffd89c;
+}
+
+.catagories {
+  height: 895px;
+  background-color: #dfb77a;
+  position: relative;
+}
+
+.popular {
+  height: 448px;
+  width: 515px;
+  background-color: #131218;
+  position: relative;
+}
+
+.popular-content {
+  position: absolute;
+  width: 337px;
+  top: 103px;
+  left: 102px;
+}
+
+.catagory-head {
+  font-size: 50px;
+  color: #ecbd75;
+  padding-bottom: 20px;
+}
+
+.catagory-para {
+  font-family: "Nunito", sans-serif;
+  font-size: 17px;
+  color: #a7a3a3;
+  padding-bottom: 30px;
+  line-height: 25px;
+}
+
+.suits {
+  position: relative;
+}
+
+.d1,
+.d2,
+.d3 {
+  position: absolute;
+  width: 265px;
+}
+
+.d1 {
+  top: 225px;
+  left: 446px;
+}
+
+.d2 {
+  top: 289px;
+  left: 765px;
+}
+
+.d3 {
+  top: 353px;
+  left: 1080px;
+}
+
+.customers {
+  height: 690px;
+  background-color: #131218;
+  position: relative;
+}
+
+.customer-head {
+  position: absolute;
+  top: 130px;
+  left: 342px;
+}
+
+.designs {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.design-head {
+  color: #dfb77a;
+  font-weight: 900;
+  font-size: 100px;
+  margin-bottom: 20px;
+}
+
+.design {
+  width: 530px;
+  margin-top: 200px;
+}
+
+.design-para {
+  font-size: 20px;
+  line-height: 25px;
+  color: #a7a3a3;
+}
+
+.satisfied {
+  height: 310px;
+  background-color: #dfb77a;
+  position: relative;
+}
+
+.satisfied-head {
+  position: absolute;
+  top: 107px;
+  left: 105px;
+  width: 700px;
+  font-size: 40px;
+  color: #000000;
+}
+
+.guide {
+  position: relative;
+  height: 1500px;
+  background-color: #fff5e5;
+}
+
+.guide-main {
+  position: absolute;
+  top: 175px;
+  left: 460px;
+  text-align: center;
+}
+
+.guide-head {
+  font-size: 40px;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+.guide-para {
+  font-family: "Nunito", sans-serif;
+  font-size: 17px;
+  color: #a7a3a3;
+  padding-bottom: 30px;
+  line-height: 25px;
+}
+
+.blog {
+  width: 365px;
+  margin: 20px;
+}
+
+.blogs {
+  position: absolute;
+  /* width:1040px; */
+  top: 315px;
+  left: 60px;
+  display: flex;
+  justify-content: space-evenly;
+  transition: all 500ms ease-in-out;
+}
+
+.blog-head,
+.blog-head a {
+  font-size: 22px;
+  color: #000000;
+  text-decoration: none;
+  margin-bottom: 10px;
+  /* border-bottom:2px solid #000000; */
+  transition: all 500ms ease-in-out;
+}
+
+.blog-para {
+  font-family: "Nunito", sans-serif;
+  color: #444343;
+  line-height: 25px;
+}
+
+.blog a:hover {
+  color: #b091657c;
+}
+
+.blog a img:hover {
+  opacity: 0.6;
+}
+
+.update {
+  background-color: #dfb77a;
+  height: 415px;
+  width: 1140px;
+  position: absolute;
+  top: 876px;
+  left: 105px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.update-content {
+  position: relative;
+}
+
+.second-con {
+  position: absolute;
+  top: 104px;
+  left: 287px;
+  text-align: center;
+}
+
+.update-head {
+  font-size: 40px;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+.update-para {
+  font-size: 20px;
+  font-family: "Nunito", sans-serif;
+  color: #646669;
+  margin-bottom: 20px;
+}
+
+#email {
+  height: 70px;
+  border-radius: 50px;
+  outline: none;
+  border: 1px solid #ffffffa2;
+  padding: 0 20px;
+  font-size: 17px;
+  position: absolute;
+  top: 1110px;
+  left: 310px;
+}
+
+.subscibe {
+  position: absolute;
+  top: 1118px;
+  left: 830px;
+  padding: 15px 50px;
+  border-radius: 40px;
+  font-family: "Nunito", sans-serif;
+  background-color: #000000;
+  color: #fff5e5;
+  font-size: 16px;
+  border: 1px solid rgb(255, 255, 255);
+  cursor: pointer;
+  transition: all 500ms ease-in-out;
+  /* box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.226); */
+}
+
+.subscibe:hover {
+  color: #000000;
+  background-color: #dfb77a;
+}
+
+.footer-content {
+  color: #a7a3a3;
+  display: flex;
+  justify-content: space-evenly;
+  /*     
+    width:1200px; */
+  /* text-align: center; */
+}
+
+.footer1 {
+  height: 410px;
+  background-color: #131218;
+}
+
+.footer-head {
+  color: #fff5e5;
+  margin-bottom: 20px;
+}
+
+.footer-para {
+  font-size: 17px;
+  margin-bottom: 20px;
+  line-height: 25px;
+}
+
+.part {
+  width: 255px;
+  margin-top: 100px;
+}
+
+.part i {
+  color: #d3d3d3;
+  padding-right: 15px;
+  font-size: 20px;
+  transition: all 500ms ease-in-out;
+}
+
+.part a {
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+  color: #a7a3a3;
+  margin: 15px 0;
+  transition: all 500ms ease-in-out;
+}
+
+.part a:hover,
+.part i:hover {
+  cursor: pointer;
+  color: #af8e5d;
+}
+
+.footer2 {
+  font-family: "Nunito", sans-serif;
+  background-color: #1b1a23;
+  height: 71px;
+  color: #777676;
+  font-size: 20px;
+}
+
+.f-para {
+  text-align: center;
+  padding-top: 15px;
+}
+</style>
+<header class="head">
+
+
+    <section class="first">
+      <h1 class="discover">Discover True Quality & Style</h1>
+      <section class="widget">
+        <ul class="social">
+          <li class="itmes"><a href="#" class="social-links">Facebook</a></li>
+          <li class="itmes"><a href="#" class="social-links">Youtube</a></li>
+          <li class="itmes">
+            <a href="#" class="social-links">Instagram</a>
+          </li>
+          <li class="itmes"><a href="#" class="social-links">Twitter</a></li>
+        </ul>
+      </section>
+    </section>
+  </header>
+
+  <section class="appoinment">
+    <div class="heading">
+      <h1 class="life">
+        <span class="one white"
+          >We use cutting-edge technologies to ensure you get the fit of a
+          lifetime.</span
+        >
+        <span class="two brown"
+          >It's time to say goodbye to unflattering off-the-rack sizes and
+          embrace a future of style and comfort. It's time for you to wear
+          clothes tailored just for you.</span
+        >
+      </h1>
+    </div>
+
+    <div class="c"></div>
+    <img src="./img/man1.png" alt="" class="man" data-aos="fade-right" />
+    <div class="content">
+      <h2 class="all white">It’s All In The Measurements</h2>
+      <p class="para1 white">
+        Discover the PERFECT fit for you, & get your measurements taken from
+        seams to seams by our experts. You’ll never go back to clumsy stitches
+        and uncomfortable fits ever again.
+      </p>
+      <p class="para2 white">
+        We guarantee a fit like your favorite gloves. disse ultrices gravida,
+        Risus commodo viverra.
+      </p>
+      <button class="app btn white">Make An Appointment</button>
+    </div>
+  </section>
+
+  <section class="stock">
+    <div class="stock-left">
+      <h1 class="stock-head">Changing The Game Embrace Your Own Style</h1>
+      <p class="stock-para">
+        Embrace your own style and see your personality reflect in your
+        clothes when you design your dream outfit with us. Do not just follow
+        the fashion trends, set one yourself! <br />
+        Design with us and impress the whole world even with a simple white
+        shirt.
+      </p>
+      <div class="reviews">
+        <p class="review">87 Reviews</p>
+        <i class="fas fa-star" style="color: #f8a900"></i>
+        <i class="fas fa-star" style="color: #f8a900"></i>
+        <i class="fas fa-star" style="color: #f8a900"></i>
+        <i class="fas fa-star" style="color: #f8a900"></i>
+        <i class="fas fa-star" style="color: #f8a900"></i>
+      </div>
+    </div>
+    <div class="stock-center" data-aos="fade-right">
+      <img src="./img/man3.jpg" style="border-radius: 10px" alt="" />
+    </div>
+    <div class="stock-right">
+      <h1 class="stock-head">In Stock</h1>
+      <p class="stock-para">
+        Get this exact button-down, classic white shirt. Make an impression
+        with a single glance at every office interview, presentation, and
+        meeting.
+      </p>
+      <a href="#" class="details">View Details</a>
+    </div>
+  </section>
+
+  <section class="catagories">
+    <div class="c1"></div>
+    <div class="popular">
+      <div class="popular-content">
+        <h1 class="catagory-head">Popular Categories</h1>
+        <p class="catagory-para">
+          Some of our most popular categories include custom-tailored suits,
+          custom-made shirts & custom chinos. Every piece of cloth can be
+          hand-made & customized just the way you want. Take a look.
+        </p>
+      </div>
+    </div>
+
+    <div class="d1">
+      <img
+        src="./img/suit1.jpg"
+        alt=""
+        style="border-radius: 10px; height: 350px; width: 264px"
+      />
+      <h1 class="stock-head">Custom-Tailored Suits</h1>
+    </div>
+    <div class="d2">
+      <img
+        src="./img/pant.jpg"
+        alt=""
+        style="border-radius: 10px; height: 350px; width: 264px"
+      />
+      <h1 class="stock-head">Custom Chinos</h1>
+    </div>
+    <div class="d3">
+      <img
+        src="./img/shirt.jpg"
+        alt=""
+        style="border-radius: 10px; height: 350px; width: 264px"
+      />
+      <h1 class="stock-head">Custom-Made Shirts</h1>
+    </div>
+  </section>
+
+  <section class="customers">
+    <h1 class="catagory-head customer-head">
+      What Our Customers Have To Say
+    </h1>
+    <div class="designs">
+      <div class="design design1">
+        <h1 class="design-head">,,</h1>
+        <p class="design-para">
+          Some of our most popular categories include custom-tailored suits,
+          custom-made shirts & custom chinos. Every piece of cloth can be
+          hand-made & customized just the way you want. Take a look.
+        </p>
+      </div>
+      <div class="design design2">
+        <h1 class="design-head">,,</h1>
+        <p class="design-para">
+          Some of our most popular categories include custom-tailored suits,
+          custom-made shirts & custom chinos. Every piece of cloth can be
+          hand-made & customized just the way you want. Take a look.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="satisfied">
+    <div class="c2"></div>
+    <h1 class="satisfied-head">
+      Be Satisfied With Every Outfit Get Your Clothes From Seams & Stitches
+    </h1>
+    <button class="btn1 white">Make An Appointment</button>
+  </section>
+
+  <section class="guide">
+    <div class="guide-main">
+      <h1 class="guide-head">Get The Tailor’s Guide</h1>
+      <p class="guide-para">Hear What The Experts Have To Say</p>
+    </div>
+
+    <div class="blogs">
+      <div class="blog blog1">
+        <a href="#"
+          ><img
+            src="./img/blog1.jpg"
+            alt=""
+            style="
+              margin: 20px 0;
+              cursor: pointer;
+              transition: all 500ms ease-in-out;
+            "
+        /></a>
+
+        <h1 class="blog-head">
+          <a href="#">Modern Stripes In Classic Tones</a>
+        </h1>
+        <p class="blog-para">
+          Wear the newest trends with some classic touches this summer! The
+          old fashion trends are making a major come back.
+        </p>
+      </div>
+      <div class="blog blog2">
+        <a href="#"
+          ><img
+            src="./img/blog2.jpg"
+            alt=""
+            style="margin: 20px 0; transition: all 500ms ease-in-out"
+        /></a>
+
+        <h1 class="blog-head"><a href="#">The Art Of Tailoring</a></h1>
+        <p class="blog-para">
+          While tailoring is often a career neglected by most people, it is
+          also the one that is most important – it gives you clothes to...
+        </p>
+      </div>
+      <div class="blog blog3">
+        <a href="#"
+          ><img
+            src="./img/blog3.jpg"
+            alt=""
+            style="margin: 20px 0; transition: all 500ms ease-in-out"
+        /></a>
+
+        <h1 class="blog-head"><a href="#">Trends To Follow In 2021</a></h1>
+        <p class="blog-para">
+          Let’s dive into some of the major fashion trends that you need to
+          follow this post-pandemic year. Comfy clothes and.
+        </p>
+      </div>
+    </div>
+    <div class="update">
+      <div class="update-content">
+        <div class="second-con">
+          <h1 class="update-head">Subscribe For Latest Updates</h1>
+          <p class="update-para">
+            Get the latest news and updates straight to your email inbox
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="c4"></div>
+    <form action="">
+      <input
+        type="text"
+        name="email"
+        id="email"
+        placeholder="Email"
+        size="70"
+      />
+      <button class="subscibe">Subscribe</button>
+    </form>
+  </section>
+
+  <footer class="footer1">
+    <div class="footer-content">
+      <div class="part part1">
+        <h1 class="footer-head">My Account</h1>
+        <p class="footer-para">
+          Lorem ipsum is placeholder text commonly used in the graphic, print,
+          and publishing industries for previewing layouts.
+        </p>
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fas fa-volleyball-ball"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-linkedin"></i>
+      </div>
+      <div class="part part2">
+        <h1 class="footer-head">Contact</h1>
+        <a href="">2/45 Tower Street, New York, USA</a>
+        <a href="">0012 678 8899</a>
+        <a href="">contact@elemart.com</a>
+        <a href="">www.elemart.com</a>
+      </div>
+      <div class="part part3">
+        <h1 class="footer-head">Information</h1>
+        <a href="">New Product</a>
+        <a href="">Top seller</a>
+        <a href="">Our Blog</a>
+        <a href="">About Our Shop</a>
+        <a href="">Secure Shopping</a>
+      </div>
+      <div class="part part4">
+        <h1 class="footer-head">Instagram</h1>
+      </div>
+    </div>
+  </footer>
+
+  <footer class="footer2">
+    <p class="f-para">© Copyright 2020 powered by WPDeveloper</p>
+  </footer>
